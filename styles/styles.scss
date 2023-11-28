@@ -48,6 +48,65 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+// ++++++++++++++++++++++++++++++++++++
+// Helper Classes
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.relative-p {
+  position: relative;
+}
+
+.absolute-p {
+  position: absolute;
+}
+.z-index-1 {z-index:1};
+.z-index-2 {z-index:2};
+.z-index-3 {z-index:3};
+
+.align-middle { vertical-align: middle; }
+
+.inline { display: inline; }
+
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
+
+.hide-on-small { display: none; }
+.show-in-large { display: block; }
+// ++++++++++++++++++++++++++++++++++++
+
+
+
+.main {
+
+  .form {
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items:center;
+    margin-inline: 5rem;
+  }
+
+  .cvc-number, .exp-date, .card-number {
+
+  }
+}
+
+
+
+
 
   .attribution {
     background-color: var(--grayish-violet);

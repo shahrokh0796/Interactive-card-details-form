@@ -14,54 +14,61 @@
 
 
 
-<main class="main">
-  <div class="blue-background">
+<main class="main relative-p">
+  <div class="blue-background absolute-p">
     <picture>
       <source srcset="./images/bg-main-desktop.png" media="(min-width: 600px)" />
       <img src="./images/bg-main-mobile.png" alt="MDN" />
+    </picture>
   </div>
 
-  <form action="">
+  <form action="" class="relative-p z-index-1 flex form">
     <section class="card">
       <div class="interactive">
         <img src="./images/bg-card-front.png" alt="visa card">
+        <span class="circle">
+          <div class="white-circle"></div>
+          <div class="bordered-circle"></div>
+        </span>
         <input type="" name="account-no">
         <span>
           <p class="name">FELICIA LEIR</p>
-          <p class="validity"></p>
+          <p class="validity">09/00</p>
         </span>
       </div>
       <div class="plain-card">
         <img src="./images/bg-card-back.png" alt="">
+        <span>000</span>
       </div>
     </section>
 
     <section>
-      <div class="card-holder">
-        <label for="name">CARDHOLDER NAME</label>
+      <div class="card-holder column">
+        <label for="name" autocomplete="name">CARDHOLDER NAME</label>
         <input type="text" id="name" name="name">
       </div>
 
-      <div class="card-number">
+      <div class="card-number column" autocomplete="number">
         <label for="number">CARD NUMBER</label>
         <input type="number" id="number" name="number">
       </div>
 
       <div class="card-validity">
-        <div class="exp-date">
+        <div class="exp-date column">
           <label for="exp">EXP DATE (MM/YY)</label>
-          <input type="number" id="exp-month" name="exp-month">
-          <input type="number" id="exp-year" name="exp-year">
+          <span>
+            <input type="number" id="exp-month" name="exp-month">
+            <input type="number" id="exp-year" name="exp-year">
+          </span>
         </div>
 
-        <div class="cvc-number">
+        <div class="cvc-number column">
           <label for="cvc">CVC</label>
           <input type="number" name="cvc" id="cvc">
         </div>
       </div>
+      <button type="submit">Confirm</button>
     </section>
-
-    <button type="submit">Confirm</button>
   </form>
 </main>
 
