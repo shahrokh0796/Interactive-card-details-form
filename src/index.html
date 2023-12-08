@@ -1,76 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Interactive card details form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
+
 <body>
 
 
 
-<main class="main relative-p">
-  <div class="blue-background absolute-p">
-    <picture>
-      <source srcset="./images/bg-main-desktop.png" media="(min-width: 600px)" />
-      <img src="./images/bg-main-mobile.png" alt="MDN" />
-    </picture>
-  </div>
-
-  <form action="" class="relative-p z-index-1 flex form">
-    <section class="card">
-      <div class="interactive">
-        <img src="./images/bg-card-front.png" alt="visa card">
-        <span class="circle">
-          <div class="white-circle"></div>
-          <div class="bordered-circle"></div>
-        </span>
-        <input type="" name="account-no">
-        <span>
-          <p class="name">FELICIA LEIR</p>
-          <p class="validity">09/00</p>
-        </span>
-      </div>
-      <div class="plain-card">
-        <img src="./images/bg-card-back.png" alt="">
-        <span>000</span>
-      </div>
-    </section>
-
-    <section>
-      <div class="card-holder column">
-        <label for="name" autocomplete="name">CARDHOLDER NAME</label>
-        <input type="text" id="name" name="name">
+  <main class="main relative-p flex">
+      <div class="blue-background absolute-p zindex-1">
+        <picture class="">
+          <source srcset="./images/bg-main-desktop.png" media="(min-width: 600px)" />
+          <img src="./images/bg-main-mobile.png" alt="MDN" />
+        </picture>
       </div>
 
-      <div class="card-number column" autocomplete="number">
-        <label for="number">CARD NUMBER</label>
-        <input type="number" id="number" name="number">
-      </div>
+      <form action="" class="flex">
+        <div class="formLeft">
+          <div class="cardFront z-index-1 relative-p">
+            <span class="whiteCircle"></span>
+            <span class="borderedCircle"></span>
+            <p>0000 0000 0000 0000</p>
+            <div class="nameAndDate">
+              <small>Felicia Leire</small>
+              <small>09/00</small>
+            </div>
+          </div>
 
-      <div class="card-validity">
-        <div class="exp-date column">
-          <label for="exp">EXP DATE (MM/YY)</label>
-          <span>
-            <input type="number" id="exp-month" name="exp-month">
-            <input type="number" id="exp-year" name="exp-year">
-          </span>
+          <div class="cardBack z-index-1 relative-p">
+            <p>000</p>
+          </div>
         </div>
 
-        <div class="cvc-number column">
-          <label for="cvc">CVC</label>
-          <input type="number" name="cvc" id="cvc">
+
+        <div class="form-right">
+          <div class="cardHolder">
+            <label for="name">Cardholder Name</label>
+            <input type="text" name="name" id="name">
+            <p id="name"></p>
+          </div>
+
+          <div class="cardNumber">
+            <label for="number">Card Number</label>
+            <input type="number" name="number" name="number">
+            <p id="number"></p>
+          </div>
+
+          <div class="expDateAndCvc">
+            <div class="labels">
+              <label for="exp">Exp Date (MM/YY)</label>
+              <label for="cvc">CVC</label>
+            </div>
+            <div class="inputs">
+              <input type="date" id="exp" name="exp">
+              <p id="mm"></p>
+              <input type="date" id="exp" name="exp">
+              <p id="yy"></p>
+              <input type="date" id="cvc" name="cvc">
+              <p id="cvc"></p>
+            </div>
+          </div>
         </div>
-      </div>
-      <button type="submit">Confirm</button>
-    </section>
-  </form>
-</main>
+      </form>
+  </main>
 
 
 
@@ -109,12 +111,15 @@
   <!-- Thank you!
   We've added your card details
   Continue -->
-  
- <footer>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Said Shahrokh Temori</a>.
-  </div>
- </footer>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Said Shahrokh Temori</a>.
+    </div>
+  </footer>
+
+
 </body>
+
 </html>

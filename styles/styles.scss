@@ -26,15 +26,18 @@
     font-family: 'Space Grotesk', sans-serif;
     margin-inline: auto;
     max-inline-size: 1440px;
+    color: var(--dark-grayish-violet);
   }
  
-  img {
-    display: block;
-    max-width: 100%;
-  }
+ 
   
   input, button {
     font: inherit;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
   }
 
   // remove arrow from input
@@ -72,6 +75,8 @@ input[type=number] {
 .absolute-p {
   position: absolute;
 }
+
+.zindex-1 {z-index: -1}
 .z-index-1 {z-index:1};
 .z-index-2 {z-index:2};
 .z-index-3 {z-index:3};
@@ -86,49 +91,15 @@ input[type=number] {
 
 .hide-on-small { display: none; }
 .show-in-large { display: block; }
-// ++++++++++++++++++++++++++++++++++++
+/* ++++++++++++++++++++++++++++++++++++ */
 
-
-
-.main {
-
-  .form {
-    border: 1px solid black;
-    justify-content: space-between;
-    align-items:center;
-    margin-inline: 5rem;
-  }
-
-  .cvc-number, .exp-date, .card-number {
-
-  }
+.cardFront, .cardBack {
+}
+.cardFront {
+  background-image: url("../src/images/bg-card-front.png");
 }
 
-
-
-
-
-  .attribution {
-    background-color: var(--grayish-violet);
-    padding-block: 5rem;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .attribution, .attribution * {
-    color: var(--very-dark-violet);
-
-    a {
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: hsl(277, 70%, 48%);
-    }
-  }
-
-
-
- 
- 
+.cardBack {
+  background-image: url("../src/images/bg-card-back.png");
+}
  
