@@ -15,35 +15,32 @@
 
 <body>
 
+  <main class="main flex relative-p">
+      <div class="blue-background absolute-p"></div>
 
-
-  <main class="main relative-p flex">
-      <div class="blue-background absolute-p zindex-1">
-        <picture class="">
-          <source srcset="./images/bg-main-desktop.png" media="(min-width: 600px)" />
-          <img src="./images/bg-main-mobile.png" alt="MDN" />
-        </picture>
-      </div>
-
-      <form action="" class="flex">
-        <div class="formLeft">
+      <form action="" class="center form">
+        <div class="formLeft z-index-1 column">
           <div class="cardFront z-index-1 relative-p">
-            <span class="whiteCircle"></span>
-            <span class="borderedCircle"></span>
-            <p>0000 0000 0000 0000</p>
-            <div class="nameAndDate">
+            <img class="frontImg" src="../src/images/bg-card-front.png" alt="Visa">
+            <div class="cardCircles flex absolute-p">
+              <span class="whiteCircle circleRadius"></span>
+              <span class="borderedCircle circleRadius"></span>
+            </div>
+            <p class="absolute-p">0000 0000 0000 0000</p>
+            <div class="nameAndDate flex absolute-p">
               <small>Felicia Leire</small>
               <small>09/00</small>
             </div>
           </div>
 
           <div class="cardBack z-index-1 relative-p">
+            <img class="back-img" src="../src/images/bg-card-back.png" alt="">
             <p>000</p>
           </div>
         </div>
 
 
-        <div class="form-right">
+        <div class="formRight">
           <div class="cardHolder">
             <label for="name">Cardholder Name</label>
             <input type="text" name="name" id="name">

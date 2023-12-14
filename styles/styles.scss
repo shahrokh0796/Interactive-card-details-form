@@ -16,9 +16,7 @@
     margin: 0;
     padding: 0;
   }
- html, body {  
-  block-size: 100%;
- }
+ 
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -27,6 +25,8 @@
     margin-inline: auto;
     max-inline-size: 1440px;
     color: var(--dark-grayish-violet);
+
+    background-color: rgb(66, 66, 66);
   }
  
  
@@ -35,7 +35,7 @@
     font: inherit;
   }
 
-  img {
+  img, picture {
     display: block;
     max-width: 100%;
   }
@@ -76,6 +76,8 @@ input[type=number] {
   position: absolute;
 }
 
+.circleRadius {border-radius: 50%;}
+
 .zindex-1 {z-index: -1}
 .z-index-1 {z-index:1};
 .z-index-2 {z-index:2};
@@ -93,13 +95,79 @@ input[type=number] {
 .show-in-large { display: block; }
 /* ++++++++++++++++++++++++++++++++++++ */
 
-.cardFront, .cardBack {
-}
-.cardFront {
-  background-image: url("../src/images/bg-card-front.png");
+.main {
+  border: 1px solid white;
+  block-size: 40rem;
 }
 
-.cardBack {
-  background-image: url("../src/images/bg-card-back.png");
+.blue-background {
+  background-image: url("../src/images/bg-main-desktop.png");
+  bottom: 0; top:0;
+  inline-size: 33%;
 }
- 
+
+.form {
+  inline-size: 100%;
+}
+
+.formLeft {
+  margin-inline-end: 10%;
+  max-inline-size: 33rem;
+  block-size: 100%;
+  inline-size: 100%;
+  justify-content: center;
+  color: var(--color-white);
+  border: 1px solid orange;
+}
+
+.cardFront, .cardBack {
+  inline-size: fit-content;
+  border: 1px solid palevioletred;
+
+  img {
+    max-inline-size: 25rem;
+    inline-size: 100%;
+    border: 2px solid darkred
+  }
+}
+
+.cardFront {
+  margin-block-end: 3rem;
+  .cardCircles {
+    top: 1rem; left: 1rem;
+    align-items: center;
+    .whiteCircle { 
+      inline-size: 1.5rem;
+      block-size: 1.5rem;
+      background-color: var(--color-white);
+      margin-inline-end: 0.5rem;
+    }
+    .borderedCircle {
+      inline-size: 0.7rem;
+      block-size: 0.7rem;
+      border: 1px solid var(--color-white);
+    }
+  }
+
+  p {
+    bottom: 25%;
+    inline-size: 100%;
+    text-align: start;
+    padding-inline-start: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .nameAndDate {
+    bottom: 5%;
+    inline-size: 100%;
+    justify-content: space-between;
+    padding-inline-end: 1.5rem;
+    padding-inline-start: 1.5rem;
+  }
+}
+
+
+.cardBack {
+  left: 17%;
+}
+
