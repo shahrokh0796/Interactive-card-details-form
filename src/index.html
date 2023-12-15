@@ -35,19 +35,19 @@
 
           <div class="cardBack z-index-1 relative-p">
             <img class="back-img" src="../src/images/bg-card-back.png" alt="">
-            <p>000</p>
+            <p class="">000</p>
           </div>
         </div>
 
 
         <div class="formRight">
-          <div class="cardHolder">
+          <div class="cardHolder column">
             <label for="name">Cardholder Name</label>
             <input type="text" name="name" id="name">
             <p id="name"></p>
           </div>
 
-          <div class="cardNumber">
+          <div class="cardNumber column">
             <label for="number">Card Number</label>
             <input type="number" name="number" name="number">
             <p id="number"></p>
@@ -58,15 +58,16 @@
               <label for="exp">Exp Date (MM/YY)</label>
               <label for="cvc">CVC</label>
             </div>
-            <div class="inputs">
-              <input type="date" id="exp" name="exp">
+            <div class="inputs flex">
+              <input type="number" maxlength="2" placeholder="MM" id="exp" name="exp">
               <p id="mm"></p>
-              <input type="date" id="exp" name="exp">
+              <input type="number" maxlength="2" placeholder="YY" id="exp" name="exp">
               <p id="yy"></p>
-              <input type="date" id="cvc" name="cvc">
+              <input type="number" id="cvc" name="cvc">
               <p id="cvc"></p>
             </div>
           </div>
+          <button type="submit">Confirm</button>
         </div>
       </form>
   </main>
