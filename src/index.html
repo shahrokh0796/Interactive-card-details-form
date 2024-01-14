@@ -16,108 +16,74 @@
 <body>
 
   <main class="main flex relative-p">
-      <div class="blue-background absolute-p"></div>
-
-      <form action="" class="center form">
-        <div class="formLeft z-index-1 column">
-          <div class="cardFront z-index-1 relative-p">
-            <img class="frontImg" src="../src/images/bg-card-front.png" alt="Visa">
-            <div class="cardCircles flex absolute-p">
-              <span class="whiteCircle circleRadius"></span>
-              <span class="borderedCircle circleRadius"></span>
-            </div>
-            <p class="absolute-p">0000 0000 0000 0000</p>
-            <div class="nameAndDate flex absolute-p">
-              <small>Felicia Leire</small>
-              <small>09/00</small>
-            </div>
-          </div>
-
-          <div class="cardBack z-index-1 relative-p">
-            <img class="back-img" src="../src/images/bg-card-back.png" alt="">
-            <p class="">000</p>
-          </div>
-        </div>
-
-
-        <div class="formRight">
-          <div class="cardHolder column">
-            <label for="name">Cardholder Name</label>
-            <input type="text" name="name" id="name">
-            <p id="name"></p>
-          </div>
-
-          <div class="cardNumber column">
-            <label for="number">Card Number</label>
-            <input type="number" name="number" name="number">
-            <p id="number"></p>
-          </div>
-
-          <div class="expDateAndCvc">
-            <div class="labels">
-              <label for="exp">Exp Date (MM/YY)</label>
-              <label for="cvc">CVC</label>
-            </div>
-            <div class="inputs flex">
-              <input type="number" maxlength="2" placeholder="MM" id="exp" name="exp">
-              <p id="mm"></p>
-              <input type="number" maxlength="2" placeholder="YY" id="exp" name="exp">
-              <p id="yy"></p>
-              <input type="number" id="cvc" name="cvc">
-              <p id="cvc"></p>
-            </div>
-          </div>
-          <button type="submit">Confirm</button>
-        </div>
-      </form>
-  </main>
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
- -->
-  <!-- Completed state start -->
-
-  <!-- Thank you!
-  We've added your card details
-  Continue -->
-
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Said Shahrokh Temori</a>.
+    <div class="blue-background">
+      <img src="./images/bg-main-desktop.png" alt="">
     </div>
-  </footer>
+
+    <form action="" class="form z-index-1 center absolute-p flex">
+      <div class="formLeft flex column z-index-1">
+        <div class="cardFront z-index-1 relative-p">
+          <div>
+            <img class="frontImg" src="../src/images/bg-card-front.png" alt="Visa">
+          </div>
+          <div class="cardCircles flex center absolute-p">
+            <span class="whiteCircle circleRadius"></span>
+            <span class="borderedCircle circleRadius"></span>
+          </div>
+          <p class="absolute-p acn">0000 0000 0000 0000</p>
+          <div class="nameAndDate flex absolute-p">
+            <small>Felicia Leire</small>
+            <small>09/00</small>
+          </div>
+        </div>
+
+        <div class="cardBack z-index-1 relative-p">
+          <img class="back-img" src="../src/images/bg-card-back.png" alt="">
+          <p class="absolute-p cvc">000</p>
+        </div>
+      </div>
 
 
+      <div class="formRight">
+        <h2 id="loading" style="display: none;">loading...</h2>
+        <div class="cardHolder flex column">
+          <label for="name">Cardholder Name</label>
+          <input type="text" name="name" maxlength="25" autocomplete="on" placeholder="e.g Jane Appleseed" id="name">
+          <p class="nameError"></p>
+        </div>
+
+        <div class="cardNumber flex column">
+          <label for="ac-number">Card Number</label>
+          <input id="ac-number" maxlength="19" autocomplete="on" placeholder="e.g 1234 5678 9123 0000" class="iACN" type="" name="number">
+          <p class="numberError"></p>
+        </div>
+
+        <div class="expDateAndCvc">
+          
+          <div class=" flex">
+            <div class="mm">
+              <label for="mm">Exp Date</label>
+              <input type="" maxlength="2" autocomplete="on" placeholder="MM" id="mm" name="mm">
+              <p class="yyError"></p>
+            </div>
+
+            <div class="yy">
+              <label for="yy">(MM/YY)</label>
+              <input class="yyError" type="" maxlength="2" autocomplete="on" placeholder="YY" id="yy" name="yy">
+            </div>
+
+
+            <div class="cvc">
+              <label for="cvc">CVC</label>
+              <input type="" autocomplete="on" class="iACVCN" maxlength="3" id="cvc" name="cvc" placeholder="e.g 123">
+              <p class="cvcError"></p>
+            </div>
+          </div>
+        </div>
+        <button class="btn" type="submit">Confirm</button>
+      </div>
+    </form>
+  </main>
 </body>
 
 </html>

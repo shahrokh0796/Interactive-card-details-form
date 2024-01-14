@@ -5,7 +5,8 @@
     --dark-grayish-violet: hsl(279, 6%, 55%);
     --very-dark-violet: hsl(278, 68%, 11%);
     --error-color: hsl(0, 100%, 66%);
-    --greadient-color:  hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --greadient-color-1:  hsl(250, 62%, 18%); 
+    --greadient-color-2: hsl(278, 83%, 16%);
 }
 
 *, *::before, *::after {
@@ -25,8 +26,6 @@
     margin-inline: auto;
     max-inline-size: 1440px;
     color: var(--dark-grayish-violet);
-
-    background-color: rgb(66, 66, 66);
   }
  
  
@@ -37,7 +36,7 @@
 
   img, picture {
     display: block;
-    max-width: 100%;
+    max-inline-size: 100%;
   }
 
   // remove arrow from input
@@ -51,22 +50,24 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+button {
+  cursor: pointer;
+}
 // ++++++++++++++++++++++++++++++++++++
 // Helper Classes
-.center {
+.flex {
   display: flex;
+}
+.center {
   justify-content: center;
   align-items: center;
 }
 
 .column {
-  display: flex;
   flex-direction: column;
 }
 
-.flex {
-  display: flex;
-}
 
 .relative-p {
   position: relative;
@@ -96,121 +97,238 @@ input[type=number] {
 /* ++++++++++++++++++++++++++++++++++++ */
 
 .main {
-  border: 1px solid white;
-  block-size: 40rem;
+  min-block-size: 36rem;
 }
 
 .blue-background {
-  background-image: url("../src/images/bg-main-desktop.png");
-  bottom: 0; top:0;
-  inline-size: 33%;
+  max-block-size: 40rem;
+  max-inline-size: 33%;
+  min-block-size: 100%;
+
+  img {
+    block-size: 100%;
+    inline-size: 100%;
+  }
 }
 
 .form {
   inline-size: 100%;
+  block-size: 100%;
+  justify-content: space-between;
+  padding-inline: 10%;
 }
 
 .formLeft {
-  margin-inline-end: 10%;
-  max-inline-size: 33rem;
-  block-size: 100%;
-  inline-size: 100%;
-  justify-content: center;
-  color: var(--color-white);
-  border: 1px solid orange;
+ max-inline-size: 35rem;
+ inline-size: 100%;
+ row-gap: 1.2rem;
+ color: var(--color-white);
 }
 
 .cardFront, .cardBack {
-  inline-size: fit-content;
-  border: 1px solid palevioletred;
-
-  img {
-    max-inline-size: 25rem;
-    inline-size: 100%;
-    border: 2px solid darkred
-  }
+  img {min-inline-size: 15rem;}
 }
 
 .cardFront {
-  margin-block-end: 3rem;
+  margin-inline-end: 6rem;
   .cardCircles {
-    top: 1rem; left: 1rem;
-    align-items: center;
+    top: 0.8rem;
+    left: 0.8rem;
+
     .whiteCircle { 
-      inline-size: 1.5rem;
-      block-size: 1.5rem;
+      block-size: 1.3rem;
+      inline-size: 1.3rem;
       background-color: var(--color-white);
       margin-inline-end: 0.5rem;
     }
     .borderedCircle {
-      inline-size: 0.7rem;
-      block-size: 0.7rem;
+      block-size: 0.8rem;
+      inline-size: 0.8rem;
       border: 1px solid var(--color-white);
     }
   }
 
   p {
-    bottom: 25%;
-    inline-size: 100%;
-    text-align: start;
-    padding-inline-start: 1.5rem;
-    letter-spacing: 0.1rem;
+    top: 55%;
+    left: 0.8rem;
+    font-size: 1.25rem;
   }
 
   .nameAndDate {
-    bottom: 5%;
-    inline-size: 100%;
-    justify-content: space-between;
-    padding-inline-end: 1.5rem;
-    padding-inline-start: 1.5rem;
+   bottom: 4%;
+   justify-content: space-between;
+   inline-size: 100%;
+   padding-inline-start: 0.8rem;
+   padding-inline-end: 2rem;
   }
 }
 
 
 .cardBack {
-  left: 17%;
-
+  margin-inline-start: 4rem;
+  margin-inline-end: 2rem;
+  
   p {
-    position: absolute;
-    z-index: 9;
-    right: 13.5%;
-    top: 43%;
-    font-size: 0.8rem;
+   top: 42.8%;
+   right: 13%;
+   text-align: end;
+   padding-inline-end: 0.5rem;
   }
 }
 
 .formRight {
-  border: 1px solid black;
-  font-size: 0.7rem;
-  color: var(--dark-grayish-violet);
-
+  color: #000;
+  max-inline-size: 26rem;
+  inline-size: 100%;
   .expDateAndCvc, .cardNumber, .cardHolder {
-    margin-block-end: 2rem;
+    margin-block-end: 1rem;
   }
 
   label {
-    margin-block-end: 0.3rem;
-    letter-spacing: 0.1rem;
     text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-block-end: 0.4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
   }
 
   .labels {
-    margin-block-end: 0.3rem;
-    border: 1px solid black;
+    margin-block-end: 0.4rem;
    }
 
-  input {
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    max-inline-size: 23rem;
-    inline-size: 100%;
-    border: 1px solid var(--dark-grayish-violet);
-    outline: none;
-  }
+   label[for="cvc"] {
 
-  input[type="date"] {
-    inline-size: 8rem;
-    margin-inline-end: 1.5rem;
+   }
+
+    p {font-size: 0.7rem;}
+
+    .mm {
+      margin-inline-end: 1rem;
+    }
+    .yy {
+      margin-inline-end: 1.5rem;
+    }
+    .cvc {
+
+    }
+   
+  input[placeholder="MM"], input[placeholder="YY"] {
+    max-inline-size: 6rem;
   }
 }
+input {
+  inline-size: 100%;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--dark-grayish-violet);
+ }
+
+.btn {
+  inline-size: 100%;
+  padding-block: 0.7rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-block-start: 1rem;
+  color: var(--color-white);
+  background: linear-gradient(to right, var(--greadient-color-1), var(--greadient-color-2));
+}
+
+.btn:hover {
+  background: linear-gradient(to right, var(hsl(251, 59%, 11%)), var(hsl(279, 31%, 89%)));
+}
+
+/* Thank you message styling */
+
+.mainTwo {
+  h2 {
+    margin-block-start: 1rem;
+    margin-block-end: 0.2rem;
+    color: #000;
+  }
+
+  p {
+    margin-block-end: 1.5rem;
+  }
+}
+
+/* Error Styles*/
+.error {
+  border: solid red 1px;
+  color: red;
+}
+
+.success {
+  border: solid rgb(107, 11, 107) 1px;
+}
+
+@media screen and (max-width: 68.75rem) {
+  .cardFront {.nameAndDate {padding-inline-end: 0.8rem;}}
+  .cardBack {
+    p {
+    top: 40%;
+    right: 8%;
+  }
+}
+ }
+
+@media screen and (max-width: 48rem) {
+  .form {padding-inline: 1%;}
+
+  .cardBack {
+    p { 
+      top: 39%;
+      right: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 39.375rem) {
+  .acn {font-size: 1rem;}
+}
+
+@media screen and (max-width: 39.375rem) {
+  .main {
+    max-inline-size: 26.875rem;
+    margin-inline: auto;
+    block-size: 46rem;
+
+    .blue-background {
+      max-block-size: revert;
+      max-inline-size: revert;
+      min-block-size: revert;
+      inline-size: 100%;
+      block-size: 35%;
+    }
+  }
+  .form {
+    flex-direction: column;
+    max-inline-size: 30rem;
+    justify-content: flex-start;
+  }
+
+  .cardFront {
+    margin-inline-end: 5rem;
+    margin-inline-start: 1rem;
+    top: 40%;
+    z-index: 2;
+    
+  }
+  
+  .cardBack {
+    margin-inline-end: 1rem;
+    margin-inline-start: 5rem;
+    bottom: 40%;
+
+    p { 
+      top: 41%;
+      right: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 26.875rem) {.main {block-size: 45rem;}}
+@media screen and (max-width: 25rem) {.main {block-size: 42rem;}}
+@media screen and (max-width: 23.438rem) {.main {block-size: 40.5rem;}}
+
+
 
