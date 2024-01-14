@@ -41,16 +41,8 @@ if (window.innerWidth <= 630) {
     bgMainMobile.src= `${bgMainMobileSrc}`;
 }
 
-console.log(nameField);
-
-
-async function receiveForm () {
-
-}
 
 const isRequired = (value) => value === "" ? false : true;
-const isBetween = (length, min, max) => length < min || length > max ? false : true;
-
 
 function showError(input, errorEl, message) {
     input.classList.remove("success");
